@@ -5,6 +5,6 @@ MAINTAINER Mukunthan Doraiswamy
 COPY . /app
 WORKDIR /app
 
-CMD ["run.py"]
+CMD ["/app/run.py"]
 
 EXPOSE 8080
