@@ -1,0 +1,81 @@
+/*body
+{
+	background-color: rgba(37, 40, 48, 1);
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}*/
+
+.box
+{
+	height:100%;
+	width: 100%;
+	padding: 5px 0;
+	margin: 5px 0;
+	float: left;
+}
+
+.box select
+{
+	background: #5fb195;
+	color: #fff;
+	padding: 10px;
+	width: 250px;
+	height: 30px;
+	border: none;
+	font-size: 15px;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	outline:none;
+}
+
+.box input[type='checkbox']
+{
+	background: #5fb195;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	outline:none;
+}
+
+.input-container
+{	
+	width: 280px;
+	position: absolute;
+	top: 50%;
+	left: 0;	
+	color: white;
+	
+}
+
+label 
+{	
+width: 250px;
+}
+
+th, td
+{
+	width: 500%;
+	text-align: left;
+}
+
+.textbox option
+{
+	border: none;
+	outline: none;
+	background: none;
+	color: white;
+	font-size: 15px;
+	width:80%;
+	float: left;
+	margin: 0 10px;
+}
+
+.btn
+{
+	width: 100%;
+	background: none;
+	border: 2px solid #4caf50;
+	color: white;
+	padding: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 12px 0;
+}

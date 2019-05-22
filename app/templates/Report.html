@@ -1,0 +1,335 @@
+<br>
+  <button type="button" class="button"><a style="color:black" href="/">Home</a></button>
+<h1><span class="blue">&lt;</span>Reports<span class="blue">&gt;</span> <span class="yellow">Details</span></h1>
+
+<h2>BAPP ID  <a href=  target="_blank">{{ bapp_id_get }} </a></h2>
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>Region</h1></th>
+			<th><h1># Of Resources</h1></th>
+			<th><h1>RDS Instances</h1></th>
+			<th><h1>Elastic Cache</h1></th>
+      <th><h1>Cluster Names</h1></th>
+      <th><h1>Terraform Repo Name</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="center">{{region}}</td>
+			<td>{{lisa}}</td>
+			<td>
+			{% for i in db_details %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+				{% for i in elasticlis %}
+				<li>{{i}}</li>
+				{% endfor %}
+			</td>
+			<td>
+			{% for i in cluster_name_values %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+			{% for i in repo_names_values %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<h1><span class="green">&lt;</span>Database (RDS)<span class="blue">&gt;</span> <span class="yellow">Details</span></h1>
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>DB Name</h1></th>
+			<th><h1>DB EndPoint</h1></th>
+			<th><h1>Status</h1></th>
+			<th><h1>Multi-AZ Enabled</h1></th>
+			<th><h1>DB Instance Type</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			{% for i in db_details %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+				{% for i in my_dbs_hosts %}
+				<li>{{i}}</li>
+				{% endfor %}
+			</td>
+			<td>
+			{% for i in my_db_instance_status %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+			{% for i in my_multiaza %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+			{% for i in my_db_instance_types %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+table {
+    border-spacing: 20px;
+}
+</style>
+</head>
+<body>
+
+	<h2 align="center">Cluster Status</h2>
+
+<table style="width:60%"; align="center">
+	<style>
+/*
+	Side Navigation Menu V2, RWD
+	===================
+	License:
+	https://goo.gl/EaUPrt
+	===================
+	Author: @PableraShow
+
+ */
+
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color: #a7a1ae;
+  background-color: #1f2739;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  color: #4dc3fa;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding-bottom: 2em;
+  color: #fb667a;
+}
+h3 {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding-bottom: 2em;
+  color: #fb667a;
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fb667a;
+  text-decoration: none;
+}
+
+.blue {
+  color: #185875;
+}
+.yellow {
+  color: #fff842;
+}
+
+.container th h1 {
+  font-weight: bold;
+  font-size: .90em;
+  text-align: left;
+  color: #0088cc;
+}
+
+.container td {
+  font-weight: normal;
+  font-size: .80em;
+  -webkit-box-shadow: 0 2px 2px -2px #0e1119;
+  -moz-box-shadow: 0 2px 2px -2px #0e1119;
+  box-shadow: 0 2px 2px -2px #0e1119;
+}
+
+.container {
+  text-align: left;
+  overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
+  display: table;
+  padding: 0 0 .80em 0;
+}
+
+.container td,
+.container th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+  background-color: #323c50;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+  background-color: #2c3446;
+}
+
+.container th {
+  background-color: #1f2739;
+}
+
+.container td:first-child {
+  color: #fb667a;
+}
+
+.container tr:hover {
+  background-color: #464a52;
+  -webkit-box-shadow: 0 6px 6px -6px #0e1119;
+  -moz-box-shadow: 0 6px 6px -6px #0e1119;
+  box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+.container td:hover {
+  background-color: #fff842;
+  color: #403e10;
+  font-weight: bold;
+
+  box-shadow: #7f7c21 -1px 1px, #7f7c21 -2px 2px, #7f7c21 -3px 3px,
+    #7f7c21 -4px 4px, #7f7c21 -5px 5px, #7f7c21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+
+@media (max-width: 700px) {
+  .container td:nth-child(4),
+  .container th:nth-child(4) {
+    display: none;
+  }
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+</style>
+  <tr>
+    <th>Cluster Name</th>
+    <th>Status</th>
+  </tr>
+	{% for k, v in mydict.items() %}
+	<tr>
+			<td> {{ k }} </td>
+			<td> {{ v }} </td>
+		{% endfor%}
+	</tr>
+</table>
+	<br>
+	<br>
+	<br>
+	<form action="cluster" method="POST" >
+		<h2>Enter Cluster Name for more details -->
+	<input type="" name="cluster_name_from" placeholder="cluster-name" required="" >
+			<input type="submit" value="Lets Check">
+</form>
+	<br>
+	<br>
+	<br>
+	<h1><span class="blue">&lt;</span>EC2<span class="blue">&gt;</span> <span class="yellow">Details</span></h1>
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>Image ID</h1></th>
+			<th><h1>IP Address</h1></th>
+			<th><h1>Instance State</h1></th>
+			<th><h1>Instance Types</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+			{% for i in image_id %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+			{% for i in IPAddress %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+			{% for i in running1 %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+			<td>
+			{% for i in instance_type %}
+      		<li>{{i}}</li>
+			{% endfor %}
+			</td>
+		</tr>
+	</tbody>
+</table>
+	<br>
+<a style="color:white" href="/">Start Again</a>
+</body>
+</html>
+
+	<br>
+	<br>
+	<h2 align="center">Total Cost </h2>
+
+<table style="width:60%"; align="center">
+  <tr>
+    <th>BAPP ID</th>
+    <th>Total Cost</th>
+  </tr>
+	<tr>
+		<td> {{ bapp_id_get }}</td>
+		<td> Not Disclosed </td>
+	</tr>
+</table>
+

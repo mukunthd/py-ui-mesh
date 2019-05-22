@@ -1,0 +1,171 @@
+body
+{
+	background-color: #66cdaa;
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}
+
+.box
+{
+	height:100%;
+	width: 100%;
+	padding: 5px 0;
+	margin: 5px 0;
+	float: left;
+}
+
+.box select, input[type='text']
+{
+	background: #5fb195;
+	color: #fff;
+	padding: 10px;
+	width: 250px;
+	height: 35px;
+	border: none;
+	font-size: 15px;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	outline:none;
+}
+
+.box input[type='checkbox']
+{
+	background: #5fb195;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	outline:none;
+}
+
+.input-container
+{	
+	width: 280px;
+	position: absolute;
+	top: 15%;
+	left:20%;	
+	color: white;
+	
+}
+
+label {
+	
+width: 250px;
+}
+
+.services
+{
+	
+	margin: auto;
+	border: 1px solid white;
+	border-collapse: collapse;
+	font-size: 12px;
+	table-layout: fixed;
+	background: #5fb195;
+	
+	color: white;
+	margin-top: 20px;
+	box-shadow: 0 5px 25px rgba(0,0,0,.5);
+	
+}
+
+th[id="t"]
+{
+	width: 500%;
+	background-color: #1a332b;
+}
+
+td[id="c"]
+{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*.input-container h1
+{
+	float: left;
+	font-size: 40px;
+	border-bottom: 6px solid #4caf50;
+	margin-bottom:50px;
+	padding: 13px 0;
+}
+
+.textbox
+{
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	
+}
+
+.textbox i
+{
+	width: 26px;
+	float: left;
+	text-align: center;
+}
+	
+.textbox select
+{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	
+	display: block;
+	margin: 30px 0;
+	padding: 10px 50px 10px 10px;
+	background: url(img/select.png) no-repeat 95% center;
+	background-color: ;
+	color: white;
+	border-radius: 4px;
+	border: 2px solid #fff;
+	width: 200px;
+	
+	
+	
+	
+	/*border: none;
+	outline: none;
+	background: none;
+	color: white;
+	font-size: 15px;
+	width:80%;
+	float: left;
+	margin: 0 10px;
+	margin-bottom: 1px solid white;*/
+}
+
+.textbox option
+{
+	border: none;
+	outline: none;
+	background: none;
+	color: white;
+	font-size: 15px;
+	width:80%;
+	float: left;
+	margin: 0 10px;
+}
+
+.btn
+{
+	width: 100%;
+	background: none;
+	border: 2px solid #4caf50;
+	color: white;
+	padding: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 12px 0;
+}
+*/
