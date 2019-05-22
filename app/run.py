@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, send_from_directory
 import boto3
 
-#profile_name = 'nvo-apps-test'
 profile_name = '<profile_Name>'
 boto3.setup_default_session(profile_name=profile_name)
 
