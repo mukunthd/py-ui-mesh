@@ -1,6 +1,5 @@
 # Tool to identify the resources based on APP ID. 
 
+Pythonic Microservice is a tool developed in python leverage various cloud-api's
 
-1. Cluster Details
-2. Service Details
-3. Database Details etc
+### The Python Code is not a cleaned up code. This message will be removed post clean-up.
