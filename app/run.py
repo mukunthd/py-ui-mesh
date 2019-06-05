@@ -44,11 +44,6 @@ def aws():
     except Exception as e:
         print('Error')
     service_list.append('elasticloadbalancing')
-    # service_type1 = request.form['service_type1']
-    # return (dirpath)
-    #boto3.setup_default_session(profile_name='nvo-apps-test')
-    #profile_name = 'wdpr-apps'
-    #profile_name = 'nvo-apps-test'
     boto3.setup_default_session(profile_name=profile_name)
     client = boto3.client('resourcegroupstaggingapi', region_name=region)
 
@@ -259,7 +254,7 @@ def aws():
                 f = e['Tags']
                 running = e['State']
                 state = running['Name']
-                # list = [{'Key': 'ownerorg', 'Value': 'dlr'}]
+            
                 if profile_name == 'wdpr-apps':
                     index = 0
                     while index < len(f):
@@ -364,7 +359,7 @@ def aws():
     except Exception as e:
         print('error')
 
-    # cluster_names = ['forms-latest', 'forms-stage', 'forms-prod']
+   
 
     mydict = {
 
@@ -468,7 +463,7 @@ def aws():
 @app.route('/cluster', methods=['POST', 'GET'])
 
 def cluster_details():
-    # cluster_names = ['forms-latest']
+   
     cluster_names = [request.form['cluster_name_from']]
     mydict = {
 
@@ -562,7 +557,7 @@ def cluster_details():
                 response = client.describe_services(
                     cluster=cluster_names,
                     services=[i]
-                    # services=['ftp-latest-live']
+                    
                 )
                 return response
 
@@ -597,24 +592,6 @@ def cluster_details():
             status='ACTIVE'
         )
         return response
-
-    #print(list_container_instances())
-
-    #def container_instances():
-    #    client = boto3.client('ecs', region_name='us-west-2')
-    #    response = client.describe_container_instances(
-    #        cluster=cluster_names,
-    #        containerInstances=[
-    #            'arn:aws:ecs:us-west-2:876496569223:container-instance/0d125617-0316-4a9f-a967-8ebf7c3d4075',
-    #        ]
-    #    )
-    #    return response
-
-    #print(container_instances())
-    # main_run()
-    # print(mydict)
-    # print(application_service)
-    # print(application_list)
 
     print(total)
     print(len(total))
