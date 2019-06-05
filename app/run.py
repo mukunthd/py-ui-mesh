@@ -255,7 +255,7 @@ def aws():
                 running = e['State']
                 state = running['Name']
             
-                if profile_name == 'wdpr-apps':
+                if profile_name == 'apps':
                     index = 0
                     while index < len(f):
                         g = f[index]
